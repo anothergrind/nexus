@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Register from "../components/Register";
-import SignIn from "../components/SignIn";
+import Register from "../pages/Register";
+import SignIn from "../pages/SignIn";
 
 export default function Login() {
   const [currentForm, setCurrentForm] = useState("login");
