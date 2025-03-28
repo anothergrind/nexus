@@ -1,58 +1,106 @@
-.modal-wrapper {
+/* Modal.css */
+.modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
 }
 
-.modal {
-  position: relative;
-  width: 80%;
-  max-width: 800px;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 4px;
+.modal-content {
+  background: white;
+  border-radius: 8px;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px; /* Added spacing from viewport edges */
 }
 
 .modal-header {
+  padding: 16px;
+  border-bottom: 1px solid #dee2e6;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
 }
 
-.modal-button {
+.modal-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  max-width: 80%; /* Prevent title overflow */
+}
+
+.close-btn {
   background: none;
   border: none;
+  font-size: 1.5rem;
   cursor: pointer;
-  font-size: 16px;
+  color: #6c757d;
+  padding: 0 8px;
+  line-height: 1; /* Fix vertical alignment */
+}
+
+.close-btn:hover {
+  color: #000;
 }
 
 .modal-body {
-  display: flex;
+  padding: 16px;
+  display: flex; /* Maintain flex layout */
+  gap: 20px; /* Add spacing between columns */
 }
 
 .modal-left {
   flex: 1;
   text-align: center;
+  min-width: 150px; /* Prevent image column collapse */
 }
 
 .modal-right {
   flex: 2;
-  padding-left: 20px;
+  overflow: auto; /* Handle long content */
 }
 
 .modal-img {
   max-width: 100%;
   height: auto;
+  max-height: 300px;
+  object-fit: contain; /* Prevent image distortion */
 }
 
 .modal-text {
-  font-size: 16px;
+  margin-bottom: 12px;
   line-height: 1.5;
+  font-size: 16px;
 }
+
+.modal-footer {
+  padding: 16px;
+  border-top: 1px solid #dee2e6;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px; /* Add spacing between buttons */
+}
+
+.read-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  white-space: nowrap; /* Prevent button text wrap */
+}
+
+.read-btn:hover {
+  background-color: #218838;
+}
+
+/* Remove duplicate classes below this line */
