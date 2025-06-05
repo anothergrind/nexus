@@ -1,0 +1,52 @@
+.book-details-container {
+  padding: 32px;
+}
+.book-title {
+  text-align: center;
+  margin-bottom: 8px;
+}
+.book-author {
+  text-align: center;
+}
+.book-rating {
+  text-align: center;
+  margin-bottom: 16px;
+}
+.book-details-grid {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.book-image-box, .book-description-box {
+  flex: 1 1 100%;
+  min-width: 0;
+  background-color: #eee;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 900px) {
+  .book-image-box, .book-description-box {
+    flex: 1 1 50%;
+  }
+}
+.book-actions-grid {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+.book-community-btn-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+.book-community-btn {
+  border-radius: 16px;
+  padding-left: 48px;
+  padding-right: 48px;
+}

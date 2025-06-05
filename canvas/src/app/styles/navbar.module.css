@@ -1,0 +1,65 @@
+.navbar-container {
+  flex-grow: 1;
+}
+.navbar-appbar {
+  border-bottom: 1px solid #e0e0e0;
+  background: #fff;
+}
+.navbar-toolbar {
+  min-height: 64px;
+  padding-left: 8px;
+  padding-right: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 600px) {
+  .navbar-toolbar {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+.navbar-title {
+  color: #000;
+  font-weight: 700;
+  font-size: 20px;
+}
+@media (min-width: 600px) {
+  .navbar-title {
+    font-size: 24px;
+  }
+}
+.navbar-links {
+  display: none;
+  gap: 16px;
+}
+@media (min-width: 900px) {
+  .navbar-links {
+    display: flex;
+  }
+}
+.navbar-link-btn {
+  color: #000 !important;
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  text-transform: none !important;
+}
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.navbar-mobile-links {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding-bottom: 8px;
+}
+@media (min-width: 900px) {
+  .navbar-mobile-links {
+    display: none;
+  }
+}

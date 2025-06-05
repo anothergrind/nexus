@@ -1,0 +1,37 @@
+.carousel-container {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 16px;
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+.carousel-inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+}
+.carousel-arrow-btn {
+  background: #fff !important;
+  margin-right: 16px !important;
+  margin-left: 16px !important;
+  z-index: 1;
+}
+.carousel-cards {
+  display: flex;
+  gap: 32px;
+  flex: 1;
+  overflow: hidden;
+}
+.carousel-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  transition: width 0.2s, height 0.2s;
+}

@@ -4,26 +4,27 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
+import styles from '../styles/book.module.css';
 
 export default function BookDetails() {
   return (
-    <Box sx={{ p: 4 }}>
-      <Typography variant="h3" align="center" gutterBottom>Book Title</Typography>
-      <Typography variant="h5" align="center">Author</Typography>
-      <Typography variant="subtitle1" align="center" gutterBottom>Rating</Typography>
-      <Grid container spacing={4} sx={{ mt: 2 }}>
-        <Box sx={{ flex: { xs: '1 1 100%', md: '1 1 50%' }, minWidth: 0 }}>
+    <Box className={styles['book-details-container']} sx={{ p: 4 }}>
+      <Typography variant="h3" className={styles['book-title']} align="center" gutterBottom>Book Title</Typography>
+      <Typography variant="h5" className={styles['book-author']} align="center">Author</Typography>
+      <Typography variant="subtitle1" className={styles['book-rating']} align="center" gutterBottom>Rating</Typography>
+      <Grid container spacing={4} className={styles['book-details-grid']} sx={{ mt: 2 }}>
+        <Box className={styles['book-image-box']} sx={{ flex: { xs: '1 1 100%', md: '1 1 50%' }, minWidth: 0 }}>
           <Box sx={{ bgcolor: '#eee', height: 250, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <Typography>IMAGE OF THE BOOK</Typography>
           </Box>
         </Box>
-        <Box sx={{ flex: { xs: '1 1 100%', md: '1 1 50%' }, minWidth: 0 }}>
+        <Box className={styles['book-description-box']} sx={{ flex: { xs: '1 1 100%', md: '1 1 50%' }, minWidth: 0 }}>
           <Box sx={{ bgcolor: '#eee', height: 250, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <Typography fontWeight="bold">DESCRIPTION OF THE BOOK</Typography>
           </Box>
         </Box>
       </Grid>
-      <Grid container spacing={2} sx={{ mt: 4 }} justifyContent="center">
+      <Grid container spacing={2} className={styles['book-actions-grid']} sx={{ mt: 4 }} justifyContent="center">
         <Box>
           <Button variant="outlined">View Sample of {'{book name}'}</Button>
         </Box>
@@ -36,8 +37,8 @@ export default function BookDetails() {
         <Box>
           <Button variant="outlined">Share {'{book name}'}</Button>
         </Box>
-        <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', mt: 2 }}>
-          <Button variant="outlined" sx={{ borderRadius: 4, px: 6 }}>View Community</Button>
+        <Box className={styles['book-community-btn-box']} sx={{ width: '100%', display: 'flex', justifyContent: 'center', mt: 2 }}>
+          <Button variant="outlined" className={styles['book-community-btn']} sx={{ borderRadius: 4, px: 6 }}>View Community</Button>
         </Box>
       </Grid>
     </Box>
