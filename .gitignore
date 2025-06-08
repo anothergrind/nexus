@@ -1,1 +1,33 @@
 node_modules
+
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Django migrations
+*/migrations/*.pyc
+*/migrations/*.pyo
+*/migrations/*.pyd
+*/migrations/__pycache__/
+*/migrations/*.py
+
+# Environment
+.env
+*.env
+.env.*
+
+# Virtual environment
+virtual/
+venv/
+ENV/
+env/
+.venv/
+
+# Database (if using SQLite for dev)
+*.sqlite3
+
+# OS files
+.DS_Store
+Thumbs.db

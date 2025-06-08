@@ -12,15 +12,15 @@ import IconButton from '@mui/material/IconButton';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
-import styles from '../styles/search.module.css';
+import styles from '../styles/library.module.css';
 
 export default function SearchPage() {
   const [filterOpen, setFilterOpen] = useState(false);
 
   return (
-    <Box className={styles['search-container']} sx={{ bgcolor: '#fff', minHeight: '100vh', p: 0, m: 0 }}>
-      <Box className={styles['search-bar']} sx={{ bgcolor: '#fff', maxWidth: 700, mx: 'auto', mt: 2, borderRadius: 2, boxShadow: 2 }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', mt: 3, mb: 2, px: 3 }}>
+    <Box className={styles['library-search-container']} sx={{ bgcolor: '#fff', minHeight: '100vh', p: 0, m: 0 }}>
+      <Box className={styles['library-search-box']} sx={{ bgcolor: '#fff', maxWidth: 700, mx: 'auto', mt: 2, borderRadius: 2, boxShadow: 2 }}>
+        <Box className={styles['library-search-bar']} sx={{ display: 'flex', alignItems: 'center', mt: 3, mb: 2, px: 3 }}>
           <TextField
             fullWidth
             variant="outlined"
@@ -42,8 +42,8 @@ export default function SearchPage() {
             }}
           />
         </Box>
-        <Paper className={styles['search-results']} sx={{ mt: 0, mx: 3, p: 4, bgcolor: '#eaeaea', minHeight: 180, borderRadius: 2, boxShadow: 1 }}>
-          <Typography variant="h4" className={styles['search-section-title']} sx={{ fontWeight: 400 }}>
+        <Paper className={styles['library-autocomplete-paper']} sx={{ mt: 0, mx: 3, p: 4, bgcolor: '#eaeaea', minHeight: 180, borderRadius: 2, boxShadow: 1 }}>
+          <Typography variant="h4" sx={{ fontWeight: 400 }}>
             Auto complete Suggestion section
           </Typography>
         </Paper>
@@ -54,6 +54,7 @@ export default function SearchPage() {
         open={filterOpen}
         onClose={() => setFilterOpen(false)}
         PaperProps={{
+          className: styles['library-drawer'],
           sx: {
             width: { xs: '100vw', sm: '33vw', md: '28vw', lg: '22vw' },
             maxWidth: 350,
