@@ -6,7 +6,6 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
-import Chip from '@mui/material/Chip';
 import styles from '../styles/about.module.css';
 
 const team = [
@@ -22,6 +21,7 @@ export default function AboutPage() {
       {/* Section 1: Who we are */}
       <Box className={styles['about-section-1']}>
         <Box className={styles['about-leaf-img']}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/leaf.svg" alt="Leaves" style={{ width: '100%', height: '100%' }} />
         </Box>
         <Box style={{ position: 'relative', zIndex: 1 }}>

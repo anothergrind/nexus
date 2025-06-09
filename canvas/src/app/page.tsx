@@ -1,5 +1,3 @@
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import NexusPicksCarousel from "./components/NexusPicksCarousel";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";

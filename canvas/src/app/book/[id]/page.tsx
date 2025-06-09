@@ -28,6 +28,7 @@ export default async function BookDetails({ params }: { params: { id: string } }
       <Box className={styles['book-details-grid']}>
         <Box className={styles['book-image-box']}>
           {book.cover_image ? (
+          /* eslint-disable-next-line @next/next/no-img-element */
             <img
               src={book.cover_image}
               alt={book.title}

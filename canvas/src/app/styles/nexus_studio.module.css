@@ -115,7 +115,7 @@
 .studio-upload-input[type="file"] {
   display: block;
   margin-bottom: 8px;
-  width: 100%;
+  width: auto;
   color: #222;
   background: transparent;
   border: none;

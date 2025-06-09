@@ -5,14 +5,24 @@ import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Link from 'next/link';
 import styles from '../styles/carousel.module.css';
 
 export default function NexusPicksCarousel() {
-  const [books, setBooks] = React.useState<any[]>([]);
+  // Define a Book type matching the backend model
+  type Book = {
+    id: number;
+    title: string;
+    author: string;
+    description?: string;
+    published_date?: string;
+    cover_image?: string;
+    language?: string;
+    rating?: number;
+  };
+  const [books, setBooks] = React.useState<Book[]>([]);
   const [index, setIndex] = React.useState(0);
   const [visibleCards, setVisibleCards] = React.useState(1);
   const [mounted, setMounted] = React.useState(false);
@@ -53,7 +63,7 @@ export default function NexusPicksCarousel() {
       if (window.innerWidth >= 600) return 220;
     }
     return 220;
-  }, [visibleCards]);
+  }, []);
 
   const handlePrev = () => {
     setIndex((prev) => (prev === 0 ? (books.length > 0 ? books.length - 1 : 0) : prev - 1));
@@ -89,6 +99,7 @@ export default function NexusPicksCarousel() {
             <Link href={`/book/${book.id}`} key={book.renderKey} style={{ textDecoration: 'none' }}>
               <Paper elevation={2} className={styles['carousel-card']} sx={{ width: cardSize, height: cardSize, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', bgcolor: '#f5f5f5', transition: 'width 0.2s, height 0.2s', cursor: 'pointer', p: 2 }}>
                 {book.cover_image ? (
+                  // eslint-disable-next-line @next/next/no-img-element
                   <img src={book.cover_image} alt={book.title} style={{ width: '100%', height: 140, objectFit: 'cover', borderRadius: 8, marginBottom: 12 }} />
                 ) : (
                   <Box sx={{ width: '100%', height: 140, bgcolor: '#e0e0e0', borderRadius: 8, mb: 1.5, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

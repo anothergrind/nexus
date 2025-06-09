@@ -11,34 +11,12 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import SearchIcon from '@mui/icons-material/Search';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import styles from '../styles/navbar.module.css';
 
-const navLinks = [
-  { label: 'Home', href: '/' },
-  { label: 'Login', href: '/login' },
-  { label: 'Dashboard', href: '/dashboard' },
-  { label: 'Reference', href: '/reference' },
-  { label: 'Settings', href: '/settings' },
-];
-
 export default function Navbar() {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const [isMobile, setIsMobile] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
-  React.useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-      if (window.innerWidth >= 768) setIsOpen(false);
-    };
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  const toggleMenu = () => setIsOpen((prev) => !prev);
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
