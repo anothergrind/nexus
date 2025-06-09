@@ -1,3 +1,5 @@
+"use client";
+
 // About page with multi-section layout
 import React from 'react';
 import Box from '@mui/material/Box';
@@ -52,15 +54,16 @@ export default function AboutPage() {
             </Box>
           ))}
         </Box>
-        <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, mt: 4 }}>
-          <Chip label="See More" sx={{ bgcolor: '#e0d6e6', color: '#222', fontWeight: 500, fontSize: 14, height: 36 }} />
-        </Box>
       </Box>
 
       {/* Section 4: Let's Begin */}
       <Box className={styles['about-section-4']}>
         <Typography variant="h5" sx={{ fontWeight: 400, fontSize: { xs: 22, md: 32 }, mb: 4 }}>Let’s Begin</Typography>
-        <Button variant="contained" sx={{ bgcolor: '#6b8e4e', color: '#fff', fontWeight: 600, fontSize: 16, px: 4, py: 1.5, borderRadius: 2, boxShadow: 1, '&:hover': { bgcolor: '#55723c' } }}>
+        <Button 
+          variant="contained" 
+          sx={{ bgcolor: '#6b8e4e', color: '#fff', fontWeight: 600, fontSize: 16, px: 4, py: 1.5, borderRadius: 2, boxShadow: 1, '&:hover': { bgcolor: '#55723c' } }}
+          onClick={() => window.location.href = '/nexus_studio'}
+        >
           Create a Nexus
         </Button>
       </Box>

@@ -52,10 +52,7 @@ export default function Navbar() {
         <Toolbar className={styles['navbar-toolbar']}>
           {/* Left: Logo and Brand */}
           <Box className={styles['navbar-brand']}>
-            <Image src="/next.svg" alt="Logo" width={40} height={40} style={{ marginRight: 12 }} />
-            <Typography variant="h6" component="div" className={styles['navbar-title']}>
-              Nexus
-            </Typography>
+            <Image src="/logo.svg" alt="Logo" width={50} height={40} style={{ marginRight: 12 }} />
           </Box>
 
           {/* Center: Nav Links (hide on mobile) */}

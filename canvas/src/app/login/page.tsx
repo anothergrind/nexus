@@ -23,25 +23,25 @@ export default function LoginPage() {
           <Typography variant="h4" className={styles['login-title']}>
             Register
           </Typography>
-          <Box sx={{ width: '100%', marginBottom: 16 }}>
+          <Box sx={{ width: '100%'}}>
             <Typography className={styles['login-label']}>Email</Typography>
             <TextField
               fullWidth
               placeholder="youremail@gmail.com"
               variant="outlined"
-              sx={{ marginBottom: 16 }}
+              sx={{ marginBottom: 6 }}
               value={registerEmail}
               onChange={e => setRegisterEmail(e.target.value)}
             />
           </Box>
-          <Box sx={{ width: '100%', marginBottom: 16 }}>
+          <Box sx={{ width: '100%'}}>
             <Typography className={styles['login-label']}>Password</Typography>
             <TextField
               fullWidth
               type="password"
               placeholder="********"
               variant="outlined"
-              sx={{ marginBottom: 16 }}
+              sx={{ marginBottom: 6 }}
               value={registerPassword}
               onChange={e => setRegisterPassword(e.target.value)}
             />
@@ -72,25 +72,25 @@ export default function LoginPage() {
         <Typography variant="h4" className={styles['login-title']}>
           Login
         </Typography>
-        <Box sx={{ width: '100%', marginBottom: 16 }}>
+        <Box sx={{ width: '100%'}}>
           <Typography className={styles['login-label']}>Email</Typography>
           <TextField
             fullWidth
             placeholder="youremail@gmail.com"
             variant="outlined"
-            sx={{ marginBottom: 16 }}
+            sx={{ marginBottom: 6 }}
             value={loginEmail}
             onChange={e => setLoginEmail(e.target.value)}
           />
         </Box>
-        <Box sx={{ width: '100%', marginBottom: 16 }}>
+        <Box sx={{ width: '100%'}}>
           <Typography className={styles['login-label']}>Password</Typography>
           <TextField
             fullWidth
             type="password"
             placeholder="********"
             variant="outlined"
-            sx={{ marginBottom: 16 }}
+            sx={{ marginBottom: 6 }}
             value={loginPassword}
             onChange={e => setLoginPassword(e.target.value)}
           />
